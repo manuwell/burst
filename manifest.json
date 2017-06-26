@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Burst Keyboard Shortcut",
+  "description": "Enables keyboard shortcuts for websites",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "images/icon-16x16.png",
+    "default_title": "Burst Shortcuts"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": [],
+      "js": ["lib/key_handler.js", "main.js"]
+    }
+  ]
+}
